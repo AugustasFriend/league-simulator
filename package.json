@@ -4,18 +4,36 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "prettier": "prettier --ignore-path .gitignore --no-config --write 'src/**/*.ts?(x)'",
+    "lint": "eslint --ignore-path .gitignore './src/**/*.ts*'",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material-ui/core": "^4.12.4",
+    "@reduxjs/toolkit": "^1.9.3",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0",
+    "styled-system": "^5.1.5",
+    "web-vitals": "^3.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-system": "^5.1.16",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.4",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }

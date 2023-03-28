@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Navbar } from "./navbar/Navbar";
+import HomeScreen from "./use-cases/home/HomeScreen";
+import ScheduleScreen from "./use-cases/schedule/ScheduleScreen";
+import StandingsScreen from "./use-cases/standings/StandingsScreen";
+import { routes } from "./routes/AppRoutes";
+import { Column } from "./reusable-components/Column";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Column>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route element={<HomeScreen />} path={routes.home()} />
+          <Route element={<ScheduleScreen />} path={routes.schedule()} />
+          <Route element={<StandingsScreen />} path={routes.standings()} />
+        </Routes>
+      </BrowserRouter>
+    </Column>
+  );
 }
 
-export default App
+export default App;

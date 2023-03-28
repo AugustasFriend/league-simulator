@@ -1,0 +1,8 @@
+.button{
+    width: 8rem;
+    height: 3.2rem;
+}
+
+.buttonText{
+    text-underline: none;
+}
