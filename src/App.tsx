@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbar } from "./navbar/Navbar";
 import HomeScreen from "./use-cases/home/HomeScreen";

@@ -1,8 +1,28 @@
-.button{
-    width: 8rem;
-    height: 3.2rem;
-}
-
 .buttonText{
     text-underline: none;
+}
+
+.button {
+  padding: 0.6em 1.2em;
+  width: 12rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #0b3142 ;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+button:hover {
+  border-color: #646cff;
+
+}
+button:focus,
+button:focus-visible {
+  background-color: -webkit-focus-ring-color;
 }
