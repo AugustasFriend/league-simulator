@@ -12,6 +12,6 @@ const rootReducer = combineReducers({ teams: teamsReducer });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export const store = configureStore({ reducer: rootReducer });
+export const store = configureStore({ reducer: persistedReducer });
 
 export const persistor = persistStore(store);

@@ -38,4 +38,4 @@ export const teamsSlice = createSlice({
 
 export const { reducer: teamsReducer, actions: teamsActions } = teamsSlice;
 
-export const getTeams = (state: StoreState) => state.teams;
+export const getTeams = (state: StoreState) => state.teams.teams;

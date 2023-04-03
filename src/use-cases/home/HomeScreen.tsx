@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTeams, teamsActions } from "../../redux/slices/teamsSlice";
 
 export const HomeScreen: FC = () => {
-  const selector = useSelector(getTeams);
-  const teams = selector.teams;
+  const teams = useSelector(getTeams);
   const dispatch = useDispatch();
   console.log(teams);
   return (
